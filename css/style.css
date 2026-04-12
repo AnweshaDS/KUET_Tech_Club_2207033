@@ -44,7 +44,7 @@ body {
 
 .btn {
   background: #3b82f6;
-  color: white !important;
+  color: white ;
   padding: 6px 12px;
   border-radius: 6px;
 }
@@ -63,10 +63,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 60px;
+  background-color: rgb(7, 184, 139);
 }
 
 .hero-text {
   max-width: 500px;
+  
 }
 
 .hero-text h1 {
@@ -75,21 +77,22 @@ body {
 
 .hero-text p {
   margin: 15px 0;
-  color: #555;
+  color: #080000;
 }
 
 .hero-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #3b82f6;
+  background: #3b48f6;
   color: white;
   text-decoration: none;
   border-radius: 8px;
 }
 
 /* KUET LOGO */
-.KUET-logo img {
-  width: 400px;
+.ktc img {
+  width: 200px;
+  height: 200px;
 }
 
 /* HIGHLIGHTS */
