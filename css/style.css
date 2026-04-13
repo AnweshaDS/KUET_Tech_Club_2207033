@@ -22,6 +22,7 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo h2 {
@@ -311,5 +312,106 @@ footer {
 @media (max-width: 600px) {
   .members-section {
     grid-template-columns: 1fr;
+  }
+}
+
+/* TIMELINE SECTION */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  z-index: 1;
+}
+
+/* CENTER LINE */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: #3b82f6;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  z-index: 0;
+}
+
+/* TIMELINE ITEM */
+.timeline-item {
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+
+/* LEFT SIDE */
+.timeline-item.left {
+  left: 0;
+}
+
+/* RIGHT SIDE */
+.timeline-item.right {
+  left: 50%;
+}
+
+/* CONTENT BOX */
+.content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* DOT */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #3b82f6;
+  border-radius: 50%;
+  top: 25px;
+  z-index: 1;
+}
+
+/* LEFT DOT POSITION */
+.timeline-item.left::before {
+  right: -7px;
+}
+
+/* RIGHT DOT POSITION */
+.timeline-item.right::before {
+  left: -7px;
+}
+
+/* DATE */
+.content span {
+  display: inline-block;
+  margin: 8px 0;
+  font-size: 13px;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    left: 10px;
   }
 }
