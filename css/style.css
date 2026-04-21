@@ -579,3 +579,16 @@ body.dark .nav-links a {
 body.dark .overlay {
   background: rgba(0,0,0,0.7);
 }
+
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
