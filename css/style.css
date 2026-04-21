@@ -553,3 +553,29 @@ footer {
     width: 100%;
   }
 }
+
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .navbar,
+body.dark .card,
+body.dark .member-card,
+body.dark .box,
+body.dark .activity-card,
+body.dark .form-container,
+body.dark .content,
+body.dark footer {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+body.dark .nav-links a {
+  color: #e2e8f0;
+}
+
+body.dark .overlay {
+  background: rgba(0,0,0,0.7);
+}
