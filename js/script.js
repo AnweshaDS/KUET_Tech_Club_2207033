@@ -1,32 +1,93 @@
-// DARK MODE TOGGLE
-const toggleBtn = document.querySelector(".theme-toggle");
+// DARK MODE 
+let toggleBtn = document.querySelector(".theme-toggle");
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
-
-// FORM SUBMIT ALERT
-const form = document.querySelector("form");
-
-if (form) {
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // stop page reload
-    alert("Application submitted successfully!");
-  });
+if (toggleBtn) {
+  // Apply saved theme
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+  toggleBtn.onclick = function () {
+    if (document.body.classList.contains("dark")) {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
 }
 
-// BACK TO TOP BUTTON
-const topBtn = document.getElementById("topBtn");
+// FORM HANDLING 
+let form = document.querySelector("form");
+if (form) {
+  let members = [];
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    let inputs = form.querySelectorAll("input, textarea");
+    let name = inputs[0].value;
+    let email = inputs[1].value;
+    if (name === "" || email === "") {
+      alert("Please fill all required fields!");
+      return;
+    }
+    let member = {
+      name: name,
+      email: email
+    };
+    members.push(member);
+    alert("Application submitted successfully!");
+    console.log("Members List:", members);
+    form.reset();
+  };
+}
 
-window.onscroll = function () {
-  if (document.documentElement.scrollTop > 200) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
+//BACK TO TOP BUTTON 
+let topBtn = document.getElementById("topBtn");
+if (topBtn) {
+  window.onscroll = function () {
+    if (document.documentElement.scrollTop > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+  topBtn.onclick = function () {
+    document.documentElement.scrollTop = 0;
+  };
+}
+
+// GALLERY CLICK EFFECT 
+let images = document.querySelectorAll(".gallery-item img");
+if (images.length > 0) {
+  images.forEach(function (img) {
+    img.onclick = function () {
+      alert("Image clicked!");
+    };
+  });
+}
+// DYNAMIC MEMBERS 
+let container = document.getElementById("membersContainer");
+if (container) {
+  membersData.forEach(function (member) {
+    let card = document.createElement("div");
+    card.className = "member-card";
+    card.innerHTML =
+      "<h3>" + member.name + "</h3>" +
+      "<p class='role'>" + member.role + "</p>";
+    container.appendChild(card);
+  });
+}
+// SIMPLE CLASS DEMO 
+class ClubMember {
+  constructor(name, role) {
+    this.name = name;
+    this.role = role;
   }
-};
+  showInfo() {
+    return this.name + " is a " + this.role;
+  }
+}
 
-topBtn.onclick = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
+// Example usage
+let demoMember = new ClubMember("Demo User", "Tester");
+console.log(demoMember.showInfo());
