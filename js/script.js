@@ -91,3 +91,11 @@ class ClubMember {
 // Example usage
 let demoMember = new ClubMember("Demo User", "Tester");
 console.log(demoMember.showInfo());
+let links = document.querySelectorAll(".nav-links a");
+
+//Highlight active link
+links.forEach(function(link) {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
