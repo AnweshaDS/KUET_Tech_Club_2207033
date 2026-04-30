@@ -32,31 +32,31 @@
       <h1>Join KUET Tech Club</h1>
       <p>Fill out the form to become a member</p>
 
-      <form>
+      <form action="../php/register.php" method="POST">
 
         <div class="input-group">
           <label>Full Name</label>
-          <input type="text" placeholder="Enter your name" required>
+          <input type="text" name="name" placeholder="Enter your name" required>
         </div>
 
         <div class="input-group">
           <label>Email</label>
-          <input type="email" placeholder="Enter your email" required>
+          <input type="email" name="email" placeholder="Enter your email" required>
         </div>
 
         <div class="input-group">
           <label>Department</label>
-          <input type="text" placeholder="e.g. CSE, EEE" required>
+          <input type="text" name="department" placeholder="e.g. CSE, EEE" required>
         </div>
 
         <div class="input-group">
           <label>Skills</label>
-          <input type="text" placeholder="e.g. HTML, Python, Robotics">
+          <input type="text" name="skills" placeholder="e.g. HTML, Python, Robotics">
         </div>
 
         <div class="input-group">
           <label>Why do you want to join?</label>
-          <textarea rows="4" placeholder="Write your motivation..."></textarea>
+          <textarea name="message" rows="4" placeholder="Write your motivation..."></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Submit Application</button>
