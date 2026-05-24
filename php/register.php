@@ -1,23 +1,34 @@
 <?php
-// To Check if form is submitted
+session_start();
+include "db.php";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // to get form data
+
     $name = $_POST["name"];
     $email = $_POST["email"];
     $department = $_POST["department"];
     $skills = $_POST["skills"];
     $message = $_POST["message"];
-    // simple validation
+
     if (empty($name) || empty($email)) {
-        echo "Please fill all required fields!";
+        echo "Please fill required fields.";
     } else {
-        // displaying data(without mysql for now)
-        echo "<h2>Registration Successful!</h2>";
-        echo "Name: " . $name . "<br>";
-        echo "Email: " . $email . "<br>";
-        echo "Department: " . $department . "<br>";
-        echo "Skills: " . $skills . "<br>";
-        echo "Message: " . $message;
+
+        $sql = "INSERT INTO members (name, email, department, skills, message)
+                VALUES ('$name', '$email', '$department', '$skills', '$message')";
+
+        if ($conn->query($sql) === TRUE) {
+
+            // SESSION
+            $_SESSION["member_name"] = $name;
+
+            // COOKIE
+            setcookie("member_email", $email, time() + 86400, "/");
+
+            header("Location: dashboard.php");
+        } else {
+            echo "Error";
+        }
     }
 }
 ?>
