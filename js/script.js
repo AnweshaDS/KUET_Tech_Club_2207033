@@ -18,7 +18,7 @@ if (toggleBtn) {
 }
 
 // FORM HANDLING 
-let form = document.querySelector("form");
+/*let form = document.querySelector("form");
 if (form) {
   let members = [];
   form.onsubmit = function (e) {
@@ -39,7 +39,7 @@ if (form) {
     console.log("Members List:", members);
     form.reset();
   };
-}
+}*/
 
 //BACK TO TOP BUTTON 
 let topBtn = document.getElementById("topBtn");
