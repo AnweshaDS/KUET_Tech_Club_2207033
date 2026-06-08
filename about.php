@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KUET Tech Club</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">
-      <h2>KUET <span>Tech Club ⚡</span></h2>
+      <h2>KUET <span>Tech Club <i class="fa-solid fa-bolt"></i></span></h2>
     </div>
 
     <nav class="nav-links">
@@ -22,7 +23,7 @@
       <a href="gallery.php">Gallery</a>
       <a href="register.php" class="btn">Join</a>
 
-      <button class="theme-toggle">🌙</button>
+      <button class="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
     </nav>
   </header>
 
@@ -42,62 +43,60 @@
     </div>
   </section>
 
-  <!-- MISSION / VISION -->
-  <section class="mission-vision">
+<!-- MISSION / VISION -->
+<section class="mission-vision">
+  <div class="box">
+    <h2><i class="fa-solid fa-bullseye"></i>Our Mission</h2>
+    <p>
+      To empower students with practical technical skills, teamwork experience,
+      and problem-solving abilities through real-world projects and events.
+    </p>
+  </div>
 
-    <div class="box">
-      <h2>🎯 Our Mission</h2>
-      <p>
-        To empower students with practical technical skills, teamwork experience, 
-        and problem-solving abilities through real-world projects and events.
-      </p>
+  <div class="box">
+    <h2><i class="fa-solid fa-rocket"></i>Our Vision</h2>
+    <p>
+      To build a strong tech community at KUET that fosters innovation,
+      creativity, and leadership in the field of technology.
+    </p>
+  </div>
+
+</section>
+
+<!-- WHAT WE DO -->
+<section class="activities">
+  <h2>What We Do</h2>
+  <div class="activity-grid">
+    <div class="activity-card">
+      <h3><i class="fa-solid fa-code"></i>Coding Practice</h3>
+      <p>Regular problem-solving sessions and contests.</p>
     </div>
 
-    <div class="box">
-      <h2>🚀 Our Vision</h2>
-      <p>
-        To build a strong tech community at KUET that fosters innovation, 
-        creativity, and leadership in the field of technology.
-      </p>
+    <div class="activity-card">
+      <h3><i class="fa-solid fa-robot"></i>Robotics Projects</h3>
+      <p>Hands-on hardware and automation projects.</p>
     </div>
 
-  </section>
-
-  <!-- WHAT WE DO -->
-  <section class="activities">
-    <h2>What We Do</h2>
-
-    <div class="activity-grid">
-
-      <div class="activity-card">
-        <h3>💻 Coding Practice</h3>
-        <p>Regular problem-solving sessions and contests.</p>
-      </div>
-
-      <div class="activity-card">
-        <h3>🤖 Robotics Projects</h3>
-        <p>Hands-on hardware and automation projects.</p>
-      </div>
-
-      <div class="activity-card">
-        <h3>🌐 Web Development</h3>
-        <p>Building real-world websites and applications.</p>
-      </div>
-
-      <div class="activity-card">
-        <h3>🧠 Workshops</h3>
-        <p>Skill development sessions by seniors and experts.</p>
-      </div>
-
+    <div class="activity-card">
+      <h3><i class="fa-solid fa-laptop-code"></i>Web Development</h3>
+      <p>Building real-world websites and applications.</p>
     </div>
-  </section>
-  <button id="topBtn">↑</button>
+
+    <div class="activity-card">
+      <h3><i class="fa-solid fa-chalkboard-user"></i>Workshops</h3>
+      <p>Skill development sessions by seniors and experts.</p>
+    </div>
+
+  </div>
+</section>
+<button id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 KUET Tech Club | Khulna University of Engineering & Technology</p>
+    <p><i class="fa-regular fa-copyright"></i>
+    2026 KUET Tech Club |Khulna University of Engineering & Technology
+    </p>
   </footer>
   <script src="js/script.js"></script>
-
 </body>
 </html>

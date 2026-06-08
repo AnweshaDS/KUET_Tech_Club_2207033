@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION["member_name"])) {
     header("Location: ../html/register.html");
     exit();
@@ -9,7 +8,6 @@ if (!isset($_SESSION["member_name"])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +24,6 @@ if (!isset($_SESSION["member_name"])) {
     <p>Your registration request has been submitted.</p>
     <p>Status: Pending Admin Approval</p>
     <?php
-
     if(isset($_COOKIE["member_email"])){
         echo "<p>Email: "
         . $_COOKIE["member_email"] .

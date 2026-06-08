@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KUET Tech Club</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">
-      <h2>KUET <span>Tech Club ⚡</span></h2>
+      <h2>KUET <span>Tech Club <i class="fa-solid fa-bolt"></i></span></h2>
     </div>
 
     <nav class="nav-links">
@@ -22,7 +23,7 @@
       <a href="gallery.php">Gallery</a>
       <a href="register.php" class="btn">Join</a>
 
-      <button class="theme-toggle">🌙</button>
+      <button class="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
     </nav>
   </header>
 
@@ -34,7 +35,6 @@
 
   <!-- GALLERY GRID -->
   <section class="gallery">
-
     <div class="gallery-item">
       <img src="image/g1.jpg" alt="Event">
       <div class="overlay">Coding Session</div>
@@ -66,11 +66,15 @@
     </div>
 
   </section>
-  <button id="topBtn">↑</button>
+  <button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 KUET Tech Club | Khulna University of Engineering & Technology</p>
+    <p><i class="fa-regular fa-copyright"></i>
+      2026 KUET Tech Club | Khulna University of Engineering & Technology
+    </p>
   </footer>
   <script src="js/script.js"></script>
 

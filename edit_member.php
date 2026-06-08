@@ -37,7 +37,6 @@ else{
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,10 +49,7 @@ else{
 <div class="form-container">
 <h1>Edit Member</h1>
 
-<form
-method="POST"
-enctype="multipart/form-data">
-
+<form method="POST" enctype="multipart/form-data">
 <div class="input-group">
 <label>Name</label>
 <input type="text"

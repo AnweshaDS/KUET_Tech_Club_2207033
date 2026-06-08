@@ -49,7 +49,6 @@ if($result->num_rows > 0){
 <td>
 
 <?php
-
 if($row["status"] == "approved"){
     echo "<span class='approved'>Approved</span>";
 }

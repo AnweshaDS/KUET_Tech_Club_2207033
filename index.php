@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KUET Tech Club</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">
-      <h2>KUET <span>Tech Club ⚡</span></h2>
+      <h2>KUET <span>Tech Club<i class="fa-solid fa-bolt"></i></span></h2>
     </div>
 
     <nav class="nav-links">
@@ -23,7 +24,7 @@
       <a href="register.php" class="btn">Join</a>
 
       <!-- Theme Toggle -->
-      <button class="theme-toggle" title="Toggle Theme">🌙</button>
+      <button class="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
     </nav>
   </header>
 
@@ -46,28 +47,29 @@
 
     <div class="cards">
       <div class="card">
-        <h3>💻 Coding</h3>
+        <h3><i class="fa-solid fa-code"></i>Coding</h3>
         <p>Enhance programming and problem-solving skills.</p>
       </div>
 
       <div class="card">
-        <h3>🤖 Robotics</h3>
+        <h3><i class="fa-solid fa-robot"></i>Robotics</h3>
         <p>Explore automation and intelligent systems.</p>
       </div>
 
       <div class="card">
-        <h3>🌐 Web Development</h3>
+        <h3><i class="fa-solid fa-globe"></i>Web Development</h3></h3>
         <p>Design and build modern web applications.</p>
       </div>
     </div>
   </section>
-  <button id="topBtn">↑</button>
+  <button id="topBtn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 KUET Tech Club | Khulna University of Engineering & Technology</p>
+    <p><i class="fa-regular fa-copyright"></i>2026 KUET Tech Club | Khulna University of Engineering & Technology</p>
   </footer>
   <script src="js/script.js"></script>
-
 </body>
 </html>

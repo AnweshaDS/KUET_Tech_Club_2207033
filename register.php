@@ -51,166 +51,87 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0"/>
-
-<title>KUET Tech Club</title>
-
-<link rel="stylesheet"
-href="css/style.css"/>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KUET Tech Club</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
 
 <!-- NAVBAR -->
 <header class="navbar">
-
-<div class="logo">
-<h2>KUET <span>Tech Club ⚡</span></h2>
-</div>
-
-<nav class="nav-links">
-
-<a href="index.php">Home</a>
-
-<a href="about.php">About</a>
-
-<a href="members.php">Members</a>
-
-<a href="events.php">Events</a>
-
-<a href="gallery.php">Gallery</a>
-
-<a href="register.php" class="btn">Join</a>
-
-<button class="theme-toggle">🌙</button>
-
-</nav>
-
+    <div class="logo">
+        <h2>KUET <span>Tech Club <i class="fa-solid fa-bolt"></i></span></h2>
+    </div>
+    <nav class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="members.php">Members</a>
+        <a href="events.php">Events</a>
+        <a href="gallery.php">Gallery</a>
+        <a href="register.php" class="btn">Join</a>
+        <button class="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+    </nav>
 </header>
 
 <!-- FORM SECTION -->
 <section class="form-section">
+    <div class="form-container">
+        <h1>Join KUET Tech Club</h1>
+        <p>Fill out the form to become a member</p>
+        <form method="POST" enctype="multipart/form-data">
+           <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
 
-<div class="form-container">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-<h1>Join KUET Tech Club</h1>
+            <div class="input-group">
+                <label>Department</label>
+                <input type="text" name="department" placeholder="e.g. CSE, EEE" required>
+            </div>
 
-<p>Fill out the form to become a member</p>
+            <div class="input-group">
+                <label>Skills</label>
+                <input type="text" name="skills" placeholder="e.g. HTML, Python, Robotics">
+            </div>
 
-<form
-method="POST"
-enctype="multipart/form-data">
+            <div class="input-group">
+                <label>Why do you want to join?</label>
+                <textarea name="message" rows="4" placeholder="Write your motivation..."></textarea>
+            </div>
 
-<div class="input-group">
+            <!-- IMAGE -->
+            <div class="input-group">
+                <label>Upload Your Photo</label>
+                <input type="file" name="image" accept="image/*">
+            </div>
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
 
-<label>Full Name</label>
-
-<input
-type="text"
-name="name"
-placeholder="Enter your name"
-required>
-
-</div>
-
-<div class="input-group">
-
-<label>Email</label>
-
-<input
-type="email"
-name="email"
-placeholder="Enter your email"
-required>
-
-</div>
-
-<div class="input-group">
-
-<label>Department</label>
-
-<input
-type="text"
-name="department"
-placeholder="e.g. CSE, EEE"
-required>
-
-</div>
-
-<div class="input-group">
-
-<label>Skills</label>
-
-<input
-type="text"
-name="skills"
-placeholder="e.g. HTML, Python, Robotics">
-
-</div>
-
-<div class="input-group">
-
-<label>Why do you want to join?</label>
-
-<textarea
-name="message"
-rows="4"
-placeholder="Write your motivation..."></textarea>
-
-</div>
-
-<!-- IMAGE -->
-<div class="input-group">
-
-<label>Upload Your Photo</label>
-
-<input
-type="file"
-name="image"
-accept="image/*">
-
-</div>
-
-<button
-type="submit"
-class="submit-btn">
-
-Submit Application
-
-</button>
-
-</form>
-
-<!-- MESSAGE -->
-<p style="margin-top:15px; color:red;">
-<?php echo $message; ?>
-</p>
-
-</div>
-
+        <!-- MESSAGE -->
+        <p style="margin-top:15px; color:red;">
+        <?php echo $message; ?>
+        </p>
+    </div>
 </section>
 
-<button id="topBtn">↑</button>
+<button id="topBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
 <!-- FOOTER -->
 <footer>
-
 <p>
-© 2026 KUET Tech Club |
-Khulna University of Engineering & Technology
+  <i class="fa-regular fa-copyright"></i>
+  2026 KUET Tech Club |
+  Khulna University of Engineering & Technology
 </p>
-
 </footer>
-
 <script src="js/script.js"></script>
-
 </body>
 </html>
-```

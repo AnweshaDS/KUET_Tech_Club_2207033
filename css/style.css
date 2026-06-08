@@ -594,9 +594,11 @@ body.dark .overlay {
 }
 
 .nav-links a.active {
-  color: #3b82f6;
+  color: white;
+  border-bottom: none;
   font-weight: bold;
-  border-bottom: 2px solid #3b82f6;
+  background: #3b82f6;
+  padding: 6px 12px;
 }
 
 
@@ -696,3 +698,39 @@ body.dark .overlay {
       text-decoration:none;
       border-radius:8px;
     }
+
+.card h3 i {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+.logo i {
+  color: #facc15;
+}
+
+.theme-toggle i {
+  font-size: 18px;
+}
+
+.box h2 i,
+.activity-card h3 i {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+#topBtn i {
+  font-size: 16px;
+}
+
+.theme-toggle i{
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+body:not(.dark) .theme-toggle i{
+    color: #222;   
+}
+
+body.dark .theme-toggle i{
+    color: #ffd700;   
+}

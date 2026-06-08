@@ -2,44 +2,29 @@
 let toggleBtn = document.querySelector(".theme-toggle");
 
 if (toggleBtn) {
-  // Apply saved theme
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-  }
-  toggleBtn.onclick = function () {
-    if (document.body.classList.contains("dark")) {
-      document.body.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.body.classList.add("dark");
-      localStorage.setItem("theme", "dark");
+    let icon = toggleBtn.querySelector("i");
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        if(icon){
+            icon.className = "fa-solid fa-sun";
+        }
     }
-  };
-}
 
-// FORM HANDLING 
-/*let form = document.querySelector("form");
-if (form) {
-  let members = [];
-  form.onsubmit = function (e) {
-    e.preventDefault();
-    let inputs = form.querySelectorAll("input, textarea");
-    let name = inputs[0].value;
-    let email = inputs[1].value;
-    if (name === "" || email === "") {
-      alert("Please fill all required fields!");
-      return;
-    }
-    let member = {
-      name: name,
-      email: email
-    };
-    members.push(member);
-    alert("Application submitted successfully!");
-    console.log("Members List:", members);
-    form.reset();
-  };
-}*/
+    toggleBtn.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+            if(icon){
+                icon.className = "fa-solid fa-sun";
+            }
+        }else{
+            localStorage.setItem("theme", "light");
+            if(icon){
+                icon.className = "fa-solid fa-moon";
+            }
+        }
+    });
+}
 
 //BACK TO TOP BUTTON 
 let topBtn = document.getElementById("topBtn");
